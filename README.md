@@ -332,7 +332,7 @@ Perfect for: Production environments, servers, containers, easy deployment
 
 ```bash
 # Clone the repository
-git clone https://github.com/NoDataFound/CVE-Google-Chat-Alert.git
+git clone https://github.com/nguyenthanhvu240/gg-chatbot-monitor-cve.git
 
 # Navigate to the directory
 cd gg-chatbot-monitor-cve
