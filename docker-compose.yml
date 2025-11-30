@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  cve-monitor:
+    build: .
+    container_name: cve-monitor
+    restart: unless-stopped
+    environment:
+      - TZ=UTC  # UTC timezone
+      - GOOGLE_CHAT_WEBHOOK=https://chat.googleapis.com/v1/spaces/YOUR_SPACE/messages?key=YOUR_KEY&token=YOUR_TOKEN # edit this to your google chat webhook
+    volumes:
+      - ./logs:/var/log  # Optional: persist logs to host
+    # Uncomment below to run script immediately on startup (for testing)
+    # command: sh -c "python /app/cve_monitor.py && cron && tail -f /var/log/cve_monitor.log"
